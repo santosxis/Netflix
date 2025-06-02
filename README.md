@@ -1,4 +1,5 @@
 # 🎬 Netflix Clone Turbinado
+Confira o projeto:  https://santosxis.github.io/Netflix/
 
 Este é um **clone aprimorado da Netflix**, desenvolvido com foco em **design moderno, responsividade, interatividade e performance**, seguindo as orientações das aulas da **instituição DevClub** 🚀.
 
