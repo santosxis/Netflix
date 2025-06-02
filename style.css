@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #000;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+
+/*
+   HEADER / MENU */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    padding: 10px 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 30px;
+}
+
+.avatar {
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/*
+   SEÇÃO CAPA (VIDEO DE FUNDO) */
+.capa-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* ocupa toda a viewport */
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.capa-conteudo {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    max-width: 40%;
+    z-index: 2;
+}
+
+.capa-titulo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.capa-descricao {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    max-width: 500px;
+    line-height: 1.4;
+}
+
+.capa-botoes {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.btn-assistir,
+.btn-info {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-assistir {
+    background-color: #e50914;
+    color: #fff;
+}
+
+.btn-assistir:hover {
+    background-color: #f6121d;
+    transform: translateY(-2px);
+}
+
+.btn-info {
+    background-color: rgba(255, 255, 255, 0.35);
+    color: #fff;
+}
+
+.btn-info:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* BOTÃO DE SOM */
+.btn-som {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.3s;
+}
+
+.btn-som:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/*
+   CARROSSEL DE FILMES */
+.carousel-section {
+    position: relative;
+    padding: 80px 20px 40px;
+    /* Espaço acima e abaixo */
+    background-color: #111;
+}
+
+.carousel-titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 16px;
+    scroll-behavior: smooth;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-img {
+    flex: 0 0 auto;
+    width: 90vw;
+    /* até 90% da largura da viewport no mobile */
+    max-width: 200px;
+    /* limita o tamanho no desktop */
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carousel-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* BOTÕES DO CARROSSEL */
+.carousel-prev,
+.carousel-next {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-prev {
+    left: 5px;
+}
+
+.carousel-next {
+    right: 5px;
+}
+
+/*
+   MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #222;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 6px;
+    color: #fff;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 1.5rem;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #fff;
+}
+
+/*
+   MEDIA QUERIES (RESPONSIVO) */
+@media (max-width: 1024px) {
+    .capa-conteudo {
+        max-width: 60%;
+    }
+
+    .capa-titulo {
+        font-size: 2.5rem;
+    }
+
+    .capa-descricao {
+        font-size: 0.9rem;
+    }
+
+    .carousel-img {
+        width: 150px;
+        height: 225px;
+    }
+}
+
+@media (min-width: 900px) {
+    .carousel-img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .capa-conteudo {
+        max-width: 80%;
+        bottom: 15%;
+    }
+
+    .capa-titulo {
+        font-size: 2rem;
+    }
+
+    .carousel-container {
+        padding: 0 10px;
+    }
+
+    .carousel-img {
+        max-width: 150px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 600px) {
+    .carousel-img {
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5px 10px;
+    }
+
+    .logo,
+    .avatar {
+        height: 25px;
+    }
+
+    .capa-conteudo {
+        max-width: 90%;
+        bottom: 10%;
+        left: 5%;
+    }
+
+    .capa-titulo {
+        font-size: 1.5rem;
+    }
+
+    .capa-descricao {
+        font-size: 0.8rem;
+    }
+
+    .btn-assistir,
+    .btn-info {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+
+    .btn-som {
+        top: 80px;
+        right: 10px;
+    }
+
+    .carousel-img {
+        max-width: 120px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        font-size: 1.2rem;
+        padding: 6px;
+    }
+}

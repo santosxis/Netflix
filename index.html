@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Netflix - Clone Turbinado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/fav.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Áudio de fundo (tocar ao carregar) -->
+    <audio src="audio/audio_tudum-netflix-sound.mp3" class="audio"></audio>
+
+    <!-- MENU FIXO NO TOPO -->
+    <header class="header">
+        <ul class="menu">
+            <li><img src="assets/logo.png" class="logo" alt="Logo Netflix"></li>
+            <li><img src="assets/avatar.png" class="avatar" alt="Avatar"></li>
+        </ul>
+    </header>
+
+    <!-- SEÇÃO DE CAPA COM VIDEO DE FUNDO -->
+    <section class="capa-section">
+        <video src="video/stranger-things.mp4" autoplay muted loop playsinline class="video-bg"></video>
+        <div class="capa-conteudo">
+            <h1 class="capa-titulo">Stranger Things</h1>
+            <p class="capa-descricao">
+                Stranger Things é uma série de ficção científica criada pelos irmãos Duffer para a
+                Netflix. Situada na cidade ficcional de Hawkins, Indiana, a trama começa em 1983 com o desaparecimento
+                de Will.
+            </p>
+            <div class="capa-botoes">
+                <button class="btn-assistir">Assistir</button>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+        <button class="btn-som">🔈</button>
+    </section>
+
+    <!-- CARROSSEL DE FILMES/SÉRIES -->
+    <section class="carousel-section">
+        <h2 class="carousel-titulo">Principais Filmes e Séries</h2>
+        <div class="carousel-container">
+            <button class="carousel-prev">❮</button>
+            <div class="carousel-track">
+                <img src="assets/f1.jpg" loading="lazy" class="carousel-img" alt="Filme 1">
+                <img src="assets/abyss.jpg" loading="lazy" class="carousel-img" alt="Filme 2">
+                <img src="assets/chokehold.jpg" loading="lazy" class="carousel-img" alt="Filme 3">
+                <img src="assets/hunter.jpg" loading="lazy" class="carousel-img" alt="Filme 4">
+                <img src="assets/jaula.jpg" loading="lazy" class="carousel-img" alt="Filme 5">
+                <img src="assets/lift.jpg" loading="lazy" class="carousel-img" alt="Filme 6">
+                <img src="assets/moonfall.jpg" loading="lazy" class="carousel-img" alt="Filme 7">
+                <img src="assets/equalizer.jpg" loading="lazy" class="carousel-img" alt="Filme 8">
+            </div>
+            <button class="carousel-next">❯</button>
+        </div>
+    </section>
+
+    <!-- MODAL DE INFORMAÇÕES -->
+    <div class="modal" id="modal-info">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Stranger Things</h2>
+            <p>
+                Stranger Things é uma série de ficção científica criada pelos irmãos Duffer para a Netflix.
+                Situada na cidade ficcional de Hawkins, Indiana, a trama começa em 1983 com o desaparecimento de Will.
+            </p>
+            <p>Gênero: <strong>Ação</strong></p>
+            <p>Ano de Lançamento: <strong>2015</strong></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
