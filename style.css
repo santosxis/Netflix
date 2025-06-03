@@ -61,7 +61,7 @@ body {
 
 .video-bg {
     position: absolute;
-    top: 50%;
+    top: 51%;
     left: 50%;
     width: 100%;
     height: 100%;
@@ -130,7 +130,7 @@ body {
 /* BOTÃO DE SOM */
 .btn-som {
     position: absolute;
-    top: 100px;
+    top: 120px;
     right: 20px;
     background: rgba(0, 0, 0, 0.4);
     border: none;
@@ -151,7 +151,7 @@ body {
    CARROSSEL DE FILMES */
 .carousel-section {
     position: relative;
-    padding: 80px 20px 40px;
+    padding: 40px 20px 40px;
     /* Espaço acima e abaixo */
     background-color: #111;
 }
@@ -311,6 +311,7 @@ body {
     object-fit: contain;
     height: 100vh;
     width: 100%;
+    top: 260px;
   }
     
 }
@@ -333,7 +334,7 @@ body {
 
     .capa-conteudo {
         max-width: 90%;
-        bottom: 7%;
+        bottom: 15%;
         left: 5%;
     }
 
